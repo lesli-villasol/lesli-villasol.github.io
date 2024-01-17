@@ -35,3 +35,9 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Commit wwwroot to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: gh-pages
+          folder: build 
