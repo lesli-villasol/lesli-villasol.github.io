@@ -24,3 +24,11 @@ jobs:
       
       - name: testing terminal 
         run: ls -al && pwd
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4.0.1
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
