@@ -1,15 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
 
-function App() {
+export default function MyApp() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Lesli's react app</p>
-      </header>
+    <div>
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      <MyButton />
     </div>
   );
 }
 
-export default App;
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+

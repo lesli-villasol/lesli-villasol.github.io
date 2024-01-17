@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Renders two buttons with value 0 initially ', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const counterButtons = screen.getAllByRole('button', { name: /clicked 0 times/i })
+  expect(counterButtons).toHaveLength(2);
 });
