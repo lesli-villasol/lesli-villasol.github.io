@@ -45,9 +45,6 @@ jobs:
       - name: Run unit tests
         run: npm run test
 
-      - name: Unit Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()
-        with:
-          name: Jest Unit Tests
-          reporter: jest-junit
+      - name: Test Reporter
+        uses: dorny/test-reporter@v1.7.0
+            
