@@ -48,7 +48,6 @@ jobs:
           reporter: jest-junit        # Format of test results
 
   Deploy_Github_Pages:
-    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: check folder
