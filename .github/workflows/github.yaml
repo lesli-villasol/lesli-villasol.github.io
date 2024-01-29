@@ -11,12 +11,13 @@ jobs:
         uses: actions/download-artifact@v3.0.1
         with:
           name: lesli-spa
+          path: ./build
       - name: check folder
         run: ls -al && pwd
       - name: Commit wwwroot to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
           branch: gh-pages
-          folder: ./ 
+          folder: ./build 
 
      
