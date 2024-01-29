@@ -36,12 +36,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Commit wwwroot to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
-        with:
-          branch: gh-pages
-          folder: build 
-
       - name: Run unit tests
         run: npm run test:ci
 
@@ -52,4 +46,15 @@ jobs:
           name: JEST Tests            # Name of the check run which will be created
           path: reports/jest-*.xml    # Path to test results
           reporter: jest-junit        # Format of test results
-            
+
+  Deploy_Github_Pages:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: check folder
+        run: ls -al && pwd
+      - name: Commit wwwroot to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: gh-pages
+          folder: build 
