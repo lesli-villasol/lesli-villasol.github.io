@@ -57,9 +57,3 @@ jobs:
         with:
           branch: gh-pages
           folder: build 
-
-  # Deploy job       
-  Deploy_to_Azure_Static_Web_Apps:
-    needs: build
-    uses: ./.github/workflows/azure.yaml     
-            
