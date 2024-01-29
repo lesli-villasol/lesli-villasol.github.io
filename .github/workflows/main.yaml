@@ -62,5 +62,5 @@ jobs:
   Deploy_to_Azure_Static_Web_Apps:
     runs-on: ubuntu-latest
     needs: build
-    uses: uses: ./.github/workflows/azure.yaml     
+    uses: ./.github/workflows/azure.yaml     
             
