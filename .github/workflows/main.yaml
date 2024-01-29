@@ -58,3 +58,8 @@ jobs:
     needs: build
     uses: ./.github/workflows/azure.yaml   
     secrets: inherit
+
+  Deploy_to_GitHub_Pages:
+    needs: build
+    uses: ./.github/workflows/github.yaml   
+    secrets: inherit
