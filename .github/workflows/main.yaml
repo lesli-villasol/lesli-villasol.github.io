@@ -53,7 +53,8 @@ jobs:
           path: reports/jest-*.xml    # Path to test results
           reporter: jest-junit        # Format of test results
 
-  Deploy_Github_Pages:
+  # Deploy job       
+  Deploy_to_Azure_Static_Web_Apps:
     needs: build
-    uses: ./.github/workflows/github.yaml
+    uses: ./.github/workflows/azure.yaml   
     secrets: inherit
