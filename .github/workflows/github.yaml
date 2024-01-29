@@ -6,6 +6,7 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Download a Build Artifact
         uses: actions/download-artifact@v3.0.1
         with:
