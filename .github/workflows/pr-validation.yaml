@@ -7,4 +7,4 @@ on:
 
 jobs:
   pr-validation:
-    uses: ./.github/workflows/main.yml
+    uses: ./.github/workflows/main.yaml

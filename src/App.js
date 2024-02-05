@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function MyApp() {
   return (
     <div>
-      <h1>Counters that update separately.</h1>
+      <h1>Counters that update separately. Test pr validation</h1>
       <MyButton />
       <MyButton />
     </div>
