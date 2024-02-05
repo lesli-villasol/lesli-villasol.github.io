@@ -29,7 +29,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v4.0.1
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
@@ -53,6 +53,10 @@ jobs:
           name: JEST Tests            # Name of the check run which will be created
           path: reports/jest-*.xml    # Path to test results
           reporter: jest-junit        # Format of test results
+
+  Run_playwright_tests:
+    uses: ./.github/workflows/playwright.yaml 
+      
 
   # Deploy job       
   Deploy_to_Azure_Static_Web_Apps:
